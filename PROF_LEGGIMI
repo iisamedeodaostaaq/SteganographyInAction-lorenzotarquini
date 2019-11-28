@@ -1,0 +1,3 @@
+reverse_stegano and stegano have to be in 
+the same folder but in 2 different folder 
+((..../AllStegano/Stegano/Stegano.pyde)and(..../AllStegano/Reverse_stegano/reverse_stegano.pyde))
