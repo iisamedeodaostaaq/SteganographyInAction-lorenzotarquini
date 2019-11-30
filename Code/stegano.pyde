@@ -7,7 +7,7 @@ codes_array=[]
 
 #setup make default background and takes the sentence
 def setup():
-    background(0)
+    background(255)
     size(b_width,b_height)
     word = input("insert word or sentence:")
     print(word)
@@ -71,7 +71,16 @@ def divide_area(divide,codes = [], *args):
         if not codes:
             break
         i+=1
+        if(piece_of_window%width==0):
+            piece_of_window=piece_of_window+width*(single_square-1)
+            
+    while(piece_of_window%width!=0):
+        for j in range (single_square):
+            for k in range (single_square):
+                pixels[ piece_of_window + k + ( width * j ) ]=color(0,0,0)
+        piece_of_window+=single_square
     updatePixels()
+    
     
     
     save("stegano.tiff")
