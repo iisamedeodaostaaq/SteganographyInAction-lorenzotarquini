@@ -63,6 +63,7 @@ def divide_area(divide,codes = [], *args):
         g = codes[1]
         b = codes[2]
         
+        #colors pixels in certain range for make the 50pixels square
         for j in range(single_square):
             for k in range(single_square):
                 pixels[ piece_of_window + k + ( width * j ) ]=color(r,g,b)
@@ -71,9 +72,10 @@ def divide_area(divide,codes = [], *args):
         if not codes:
             break
         i+=1
+        #makes an end of line
         if(piece_of_window%width==0):
             piece_of_window=piece_of_window+width*(single_square-1)
-            
+    #fills squares to make a complete rect       
     while(piece_of_window%width!=0):
         for j in range (single_square):
             for k in range (single_square):
@@ -83,7 +85,7 @@ def divide_area(divide,codes = [], *args):
     
     
     
-    save("stegano.tiff")
+    save("../reverse_stegano/stegano.tiff")
     
 
 def check():
